@@ -1,5 +1,5 @@
 #!/bin/bash
 while read line
 do
-   cp "$line" /exclude_dir/
+   cp -r "$line" /exclude_dir/
 done < filestobeexcluded.csv
