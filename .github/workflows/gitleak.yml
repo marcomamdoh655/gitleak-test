@@ -17,15 +17,19 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      #- uses: pCYSl5EDgo/cat@master
-      #  id: test
-      #  with:
-      #    path: text.txt
-
+      - name: execute exclude.sh
+        run: ./exclude.sh
+        
+      - name: Cache Build Artifacts
+        uses: actions/cache@v3
+        with:
+          path: ${{ github.workspace }}/exclude
+          key: ${{ github.sha }}-exclude
+      
       - name: Super-Linter
         uses: github/super-linter@v4.10.0
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           #IGNORE_GENERATED_FILES: true
-          #FILTER_REGEX_EXCLUDE: ${{ steps.test.outputs.text }}
+          FILTER_REGEX_EXCLUDE: .*exclude_dir/.*
           
