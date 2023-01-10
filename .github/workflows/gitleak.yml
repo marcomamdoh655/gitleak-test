@@ -22,5 +22,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           #IGNORE_GENERATED_FILES: true
-          FILTER_REGEX_EXCLUDE: /test/
+          FILTER_REGEX_EXCLUDE: (/test/ | /test2/)
         
