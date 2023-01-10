@@ -1,4 +1,4 @@
-test/ 
+test/test.sh 
 test2/
 
 
