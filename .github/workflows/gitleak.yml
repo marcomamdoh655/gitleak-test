@@ -17,13 +17,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: execute exclude.sh
-        run: |
-          pwd
-          ls
-          chmod +x exclude.sh
-          ./exclude.sh
-        
+      - name: execute exclude.py
+        run: python3 exclude.py
+              
       - name: Cache Build Artifacts
         uses: actions/cache@v3
         with:
