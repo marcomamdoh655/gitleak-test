@@ -19,6 +19,8 @@ jobs:
       
       - name: execute exclude.sh
         run: |
+          pwd
+          ls
           chmod +x exclude.sh
           ./exclude.sh
         
