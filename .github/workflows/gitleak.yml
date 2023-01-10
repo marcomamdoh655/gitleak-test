@@ -20,15 +20,10 @@ jobs:
       - name: execute exclude.py
         run: | 
           regex="$(python3 exclude.py)"
-          echo "regex=$regex" >> $GITHUB_ENV
+          echo "regex=$regex" >> "$GITHUB_ENV"
           cat "$GITHUB_ENV"
           echo "$GITHUB_ENV"
-#       - name: Cache Build Artifacts
-#         uses: actions/cache@v3
-#         with:
-#           path: ${{ github.workspace }}/exclude
-#           key: ${{ github.sha }}-exclude
-      
+
       - name: Super-Linter
         uses: github/super-linter@v4.10.0
         env:
