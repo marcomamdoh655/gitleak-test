@@ -1,5 +1,3 @@
-#!/bin/bash
-while read line
-do
-   cp "$line" exclude_dir/
-done < filestobeexcluded.csv
+with open('filestobeexcluded.txt', 'r') as f:
+    x = f.readlines()
+    print(x)
