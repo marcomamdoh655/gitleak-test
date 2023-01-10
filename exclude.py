@@ -1,3 +1,3 @@
 with open('filestobeexcluded.txt', 'r') as f:
-    lines = [i.replace('\n', '') for i in f.readlines()]
+    lines = [line.replace('\n', '').strip() for line in f.readlines() if line.replace('\n', '').strip()]
     print("|".join(lines))
