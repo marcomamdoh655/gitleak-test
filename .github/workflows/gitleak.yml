@@ -27,5 +27,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           #IGNORE_GENERATED_FILES: true
-          FILTER_REGEX_EXCLUDE: ${{ steps.text.outputs.text }}
+          FILTER_REGEX_EXCLUDE: ${{ steps.test.outputs.text }}
         
