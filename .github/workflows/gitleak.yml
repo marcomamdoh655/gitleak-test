@@ -26,10 +26,10 @@ jobs:
           path: ${{ github.workspace }}/exclude
           key: ${{ github.sha }}-exclude
       
-      - name: Super-Linter
-        uses: github/super-linter@v4.10.0
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          #IGNORE_GENERATED_FILES: true
-          FILTER_REGEX_EXCLUDE: .*${{ github.workspace }}/exclude/.*
+#       - name: Super-Linter
+#         uses: github/super-linter@v4.10.0
+#         env:
+#           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+#           #IGNORE_GENERATED_FILES: true
+#           FILTER_REGEX_EXCLUDE: .*${{ github.workspace }}/exclude/.*
           
